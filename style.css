@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+#order-select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* 5-column grid */
+#song-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  padding: 0 16px 16px;
+}
+
+.card {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+.card .title {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card .artist {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* fullscreen overlay */
+#fullscreen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#fullscreen.hidden {
+  display: none;
+}
+
+#fs-image {
+  max-width: 60vw;
+  max-height: 60vh;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+#fs-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+#fs-artist {
+  font-size: 16px;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+
+#fs-close {
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+#lyrics {
+  max-width: 60vw;
+  max-height: 30vh;
+  margin-top: 12px;
+  padding: 8px 12px;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #050505;
+  border-radius: 8px;
+}
