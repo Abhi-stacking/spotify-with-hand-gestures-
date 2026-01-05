@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <h1>SPOTIFY PLAYLIST</h1>
+    <meta charset="utf-8" />
+    <title>Spotify Playlist Grid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div id="song-count"></div>
+
+      <select id="order-select">
+        <option value="default">Default</option>
+        <option value="reverse">Reverse</option>
+        <option value="random">Random</option>
+        <option value="artist-asc">Artist A–Z</option>
+        <option value="artist-desc">Artist Z–A</option>
+        <option value="preview-only">Preview only</option>
+      </select>
+    </div>
+
+    <div id="song-grid"></div>
+
+    <audio id="player"></audio>
+
+    <div id="fullscreen" class="hidden">
+      <img id="fs-image" />
+      <h2 id="fs-title"></h2>
+      <h3 id="fs-artist"></h3>
+      <pre id="lyrics"></pre>
+      <button id="fs-close">Close</button>
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js"></script>
+
+<script type="module" src="drawHand.js"></script>
+<script type="module" src="script.js"></script>
+  </body>
+</html>
